@@ -33,7 +33,7 @@ public class UserController {
         return "new";
     }
 
-    @PostMapping()
+    @PostMapping("/addUser")
     public String createUser(@ModelAttribute("user")  User user) {
         userService.add(user);
         return "redirect:/users";
